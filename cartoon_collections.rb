@@ -20,12 +20,9 @@ word.length > 4
 end 
 end 
 
-def find_the_cheese (array)
-  cheese = ["gouda", "camembert", "cheddar"]
-  if array.include? (cheese)
-   puts cheese.find (cheese)
-  else
-    nil
-end
-end
+def find_the_cheese(array)
+  array.find do |cheese| 
+    cheese == "cheddar" || cheese == "gouda" || cheese == "camembert"
+    end 
+  end
   
